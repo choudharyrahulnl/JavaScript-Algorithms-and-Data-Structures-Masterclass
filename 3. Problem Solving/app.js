@@ -104,19 +104,21 @@
 //     const result = {}
 //     // WE NEED TO GO THOROUGH ALL THE CHAR - LOOP
 //     for (const char of str.toLowerCase()) {
-//         // IF CHAR IS A NUMBER/LETTER AND IS KEY IN OUR OBJECT, ADD ONE TO COUNT/VALUE
-//         if(result[char] > 0) {
-//             result[char]++;
-//         }
-//         // IF CHAR IS A NUMBER/LETTER AND IS NOT A KEY IN OUR OBJECT, ADD IT AND SET COUNT/VALUE TO 1
-//         else {
-//             result[char] = 1;
+//         // IF CHAR IS SOMETHING ELSE (SPACE, PERIOD...) DON'T DO ANYTHING
+//         if(/[a-z0-9]/.test(char)) {
+//             // IF CHAR IS A NUMBER/LETTER AND IS KEY IN OUR OBJECT, ADD ONE TO COUNT/VALUE
+//             if(result[char] > 0) {
+//                 result[char]++;
+//             }
+//             // IF CHAR IS A NUMBER/LETTER AND IS NOT A KEY IN OUR OBJECT, ADD IT AND SET COUNT/VALUE TO 1
+//             else {
+//                 result[char] = 1;
+//             }
 //         }
 //     }
 //     // RETURN AN OBJECT WITH KEY AS CHAR AND COUNT AS VALUE
 //     return result;
 // }
-//
 // console.log(charCount("hi"));
 // console.log(charCount("hello"));
 // console.log(charCount("Hello there"));
@@ -135,3 +137,43 @@
 // CAN YOU THINK OF OTHER WAY OF REFACTOR
 // HOW HAVE OTHER PEOPLE SOLVED THE PROBLEM
 
+// EX for charCount(str) IF WE ARE USING FOR-LOOP THEN WE CAN REFACTOR USING FOR-OF LOOP
+// COMBINE IF ELSE IN 1 LINE
+
+// function charCount(str) {
+//     const result = {}
+//     for (const char of str.toLowerCase()) {
+//         if(/[a-z0-9]/.test(char)) {
+//             result[char] = ++result[char] || 1
+//         }
+//     }
+//     return result;
+// }
+// console.log(charCount("Hello there"));
+
+
+
+// AFTER GOOGLE FIND REGEX IS 55% SLOWER THAN THIS APPROACH
+// NOW WE ARE DOING LOWER CASE WHEN WE KNOW ITS ALPHANUMERIC ONLY
+
+// function charCount(str) {
+//     const result = {}
+//     for (let char of str) {
+//         if(isAlphaNumeric(char)) {
+//             char = char.toLowerCase();
+//             result[char] = ++result[char] || 1
+//         }
+//     }
+//     return result;
+// }
+// function isAlphaNumeric(char) {
+//     const code = char.charCodeAt(0);
+//     if (!(code > 47 && code < 58) && // numeric [0-9]
+//         !(code > 64 && code < 91) && // upper alpha [A-Z]
+//         !(code > 96 && code < 123) // lower alpha [a-z]
+//     ) {
+//         return false;
+//     }
+//     return true;
+// }
+// console.log(charCount("Hello there"));
