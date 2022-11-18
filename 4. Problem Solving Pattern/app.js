@@ -25,7 +25,7 @@
 // THIS PATTERN USES OBJECTS OR SETS TO COLLECT VALUES/FREQUENCIES OF VALUES
 // THIS CAN OFTEN AVOID NEED OF NESTED LOOPS OR O(n^2) OPERATIONS WITH ARRAYS AND STRINGS
 
-// EX: WRITE A FUNCTION CALLED SAME< WHICH ACCEPTS 2 ARRAYS. THE FUNCTION SHOULD RETURN TRUE IF EVERY VALUE
+// EX: WRITE A FUNCTION CALLED same() WHICH ACCEPTS 2 ARRAYS. THE FUNCTION SHOULD RETURN TRUE IF EVERY VALUE
 // IN THE ARRAY HAS ITS CORRESPONDING VALUE SQUARED IN SECOND ARRAY
 // same([1,2,3], [4,1,9]) // true
 // same([1,2,3], [1,9]) // false
@@ -61,10 +61,10 @@
 //
 //     // LOOP OVER BOTH ARRAY AND POPULATE OBJECT
 //     for (const val of arr1) {
-//         frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1;
+//         frequencyCounter1[val] = (frequencyCounter1[val] || 1) + 1;
 //     }
 //     for (const val of arr2) {
-//         frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1;
+//         frequencyCounter2[val] = (frequencyCounter2[val] || 1) + 1;
 //     }
 //
 //     // LOOP OVER frequencyCounter1 OBJECT
