@@ -203,9 +203,9 @@
 
 
 
-////////////////////
-// MULTIPLE POINTER
-////////////////////
+/////////////////////////
+// WINDOW SLIDER PATTERN
+/////////////////////////
 
 // THIS PATTERN INVOLVES CREATING A WINDOW WHICH CAN EITHER BE AN ARRAY OR
 // A NUMBER FROM ONE POSITION TO OTHER
