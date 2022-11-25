@@ -1,0 +1,13 @@
+/////////////////////////////////////////
+// DATA STRUCTURE INTRODUCTION
+/////////////////////////////////////////
+
+
+
+/////////////////////////////////////////
+// SINGLY LINKED LIST
+/////////////////////////////////////////
+
+// WHEN WE NEED TO INSERT IN BEGINNING/END THEN ARRAYS ARE SLOWER
+// WHEN WE NEED TO INSERT IN MIDDLE THEN ARRAYS ARE SLOWER
+// IN THESE SCENARIOS WE USE SINGLY LINKED LIST

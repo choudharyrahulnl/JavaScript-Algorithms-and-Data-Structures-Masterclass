@@ -71,6 +71,7 @@
 //     for (const key in frequencyCounter1) {
 //         // IF KEY IS NOT PRESENT IN frequencyCounter2
 //         if (frequencyCounter2[key ** 2] === -1) return false
+//
 //         // IF KEY IS PRESENT BUT VALUE IS NOT SAME
 //         if (frequencyCounter2[key ** 2] !== frequencyCounter1[key]) return false;
 //     }
@@ -169,10 +170,10 @@
 //     return uniqueCount;
 // }
 //
-// console.log(countUniqueValues([1,1,1,1,1,1,2]));
-// console.log(countUniqueValues([1,2,3,4,4,4,7,7,12,12,13]));
-// console.log(countUniqueValues([0]));
-// console.log(countUniqueValues([-2,-1,-1,0,1]));
+// console.log(countUniqueValues([1,1,1,1,1,1,2])); // 2
+// console.log(countUniqueValues([1,2,3,4,4,4,7,7,12,12,13])); // 7
+// console.log(countUniqueValues([0])); // 1
+// console.log(countUniqueValues([-2,-1,-1,0,1])); // 4
 
 
 // TIME COMPLEXITY O(n)
